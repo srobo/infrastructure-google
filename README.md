@@ -16,6 +16,12 @@ To setup, you need to have the following installed:
 * [GCloud][gcloud]
 * [jq][jq]
 
+You'll need to log into GCloud, which you can do by running:
+
+```bash
+gcloud auth application-default login
+```
+
 ## Make a service account
 
 The following script makes an account, gives it editor permissions in your 
@@ -24,6 +30,18 @@ folder.
 
 ```bash
 ./scripts/account.sh <project_name>
+```
+
+## Setup your secret config (Optional)
+
+**If you don't run this step, you'll be prompted for your config when you run
+Terraform.**
+
+If you want to store this in a file, you run the following:
+
+```bash
+cp terraform.tfvars.template terraform.tfvars
+vim terraform.tfvars
 ```
 
 ### Get a public IP
