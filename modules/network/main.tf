@@ -34,6 +34,7 @@ resource "google_compute_firewall" "allow-external-ssh" {
   description = "Allows anyone to SSH into the network"
   name        = "allow-external-ssh"
   network     = "${google_compute_network.network.name}"
+  source_ranges = ["0.0.0.0/0"]
 
   allow {
     protocol = "tcp"
@@ -45,6 +46,7 @@ resource "google_compute_firewall" "allow-external-icmp" {
   description = "Allows anyone to icmp into the network"
   name        = "allow-external-icmp"
   network     = "${google_compute_network.network.name}"
+  source_ranges = ["0.0.0.0/0"]
 
   allow {
     protocol = "icmp"
@@ -55,6 +57,7 @@ resource "google_compute_firewall" "allow-external-rdp" {
   description = "Allows anyone to RDP into the network"
   name        = "allow-external-rdp"
   network     = "${google_compute_network.network.name}"
+  source_ranges = ["0.0.0.0/0"]
 
   allow {
     protocol = "tcp"

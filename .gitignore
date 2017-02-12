@@ -1,5 +1,5 @@
 .terraform
 terraform.tfvars
-secrets/
+secrets/credentials.json
 terraform.tfstate
 terraform.tfstate.backup

@@ -1,4 +1,4 @@
-resource "google_container_cluster" "website" {
+resource "google_container_cluster" "srobo-cluster" {
   name = "srobo-website"
   zone = "${var.zones[0]}"
   network = "${var.network}"
